@@ -1,3 +1,17 @@
+.SignIn{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+    margin-top: 0vh;
+    padding-bottom: 30vh;
+    background-attachment:fixed;
+    background-image: url(../../Assets/Images/8289.jpg);
+    overflow-y: hidden;
+    background-size: 100%;
+}::-webkit-scrollbar{
+    display: none;
+    
+}
 
 #sign-in-page{
     display: flex;
@@ -5,14 +19,15 @@
     justify-content: center;
     flex-direction: column;
     column-gap: 100px;
+    overflow-y: hidden;
 }
 
-.header{
-    font-size: 40px;
+.header-sign-in{
+    font-size: 8vh;
     font-family: 'Courier New', Courier, monospace;
 }
 
-.sub-header{
+.sub-header-sign-in{
     font-size: 25px;
     font-family:Arial, Helvetica, sans-serif;
 }

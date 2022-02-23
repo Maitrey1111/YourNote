@@ -94,11 +94,11 @@ const SignUp = () => {
     return (
         <div className="SignUp">
             <div id="sign-up-page">
-                <div className="header">
-                    <h3 >Simple Signup</h3>
+                <div className="header-sign-up">
+                    <h3 >Signup to YourNote</h3>
                 </div>
                 <main className="input-box">
-                    <h3 className="sub-header">Sign Up</h3>
+                    <h3 className="sub-header-sign-up">Sign Up</h3>
                     <div className="inputs">
                         <input className="email-input" id="name" type="text" placeholder="Name"></input>
                         <input className="email-input" id="username" type="text" placeholder="Username"></input>

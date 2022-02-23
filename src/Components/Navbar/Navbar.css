@@ -1,0 +1,43 @@
+
+.navbar{
+    font-family: Arial, Helvetica, sans-serif;
+    position: fixed;
+    top:0;
+    background-color: transparent;
+    background-blend-mode: 0.1;
+    width: 100vw;
+    height: 8vh;
+    z-index: 10;
+}
+
+.navbar-holder{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 2vh 2vw;
+    padding: 0;
+
+}
+
+.logout-button{
+    border-radius: 6px;
+    padding: 0.5vh 1vw;
+    background-color: rgb(230, 67, 3);
+    color: white;
+    z-index: 10;
+}
+.logout-button:hover{
+    background-color: rgb(182, 52, 0);
+}
+
+.button-text{
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0;
+    font-size: large;
+    font-weight: bold;
+    letter-spacing: 1px;
+}

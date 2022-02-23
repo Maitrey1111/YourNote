@@ -22,13 +22,14 @@ const SignIn = () => {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    signInWithEmailAndPassword(auth, email, password)
+    await signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
         
         onAuthStateChanged(auth, (user) => {
           if (user != null) {
+            setUser(user);
             console.log("User is logged in");
             //const uid = User.uid;
           } 
@@ -55,17 +56,14 @@ const SignIn = () => {
       });
   }
 
-
-
-
   return (
     <div className="SignIn">
       <div id="sign-in-page">
-        <div className="header">
-          <h3 >Simple Login</h3>
+        <div className="header-sign-in">
+          <h3 >Login to YourNote</h3>
         </div>
         <main className="input-box">
-          <h3 className="sub-header">Sign In</h3>
+          <h3 className="sub-header-sign-in">Sign In</h3>
           <div className="inputs">
             <input className="email-input" id="email" type="email" placeholder="Email"></input>
             <input className="password-input" id="password" type="password" placeholder="Password"></input>
@@ -77,10 +75,6 @@ const SignIn = () => {
           </div>
         </main>
       </div>
-
-
-
-
     </div>
   );
 }

@@ -1,3 +1,15 @@
+.SignUp{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 25vh;
+
+    background-image: url(../../Assets/Images/8289.jpg);
+    overflow-y: hidden;
+    background-size: 100%;
+    background-attachment:fixed;
+}::-webkit-scrollbar{
+    display: none;
+}
 
 #sign-up-page{
     display: flex;
@@ -5,15 +17,16 @@
     justify-content: center;
     flex-direction: column;
     column-gap: 100px;
+    overflow-y: hidden;
 }
 
-.header{
-    font-size: 40px;
+.header-sign-up{
+    font-size: 8vh;
     font-family: 'Courier New', Courier, monospace;
 }
 
-.sub-header{
-    font-size: 25px;
+.sub-header-sign-up{
+    font-size: 3.5vh;
     font-family:Arial, Helvetica, sans-serif;
 }
 
