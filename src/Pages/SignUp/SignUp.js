@@ -79,9 +79,7 @@ const SignUp = () => {
                         document.getElementById("errors").innerText = e;
 
                     document.getElementById("errors").style.display = "flex";
-
                 });
-
         }
         else {
             document.getElementById("errors").innerText = "Passwords don't match";

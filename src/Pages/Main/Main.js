@@ -18,7 +18,7 @@ const Main = () => {
 
     const [User, setUser] = useState('...');
     const [UID, setUID] = useState('');
-    const [Email, setEmail] = useState({});
+    const [Username, setUsername] = useState({});
 
 
     onAuthStateChanged(auth, (User) => {
@@ -29,19 +29,22 @@ const Main = () => {
     if (UID.toString()) {
         onSnapshot(doc(db, "Users", UID.toString()), (doc) => {
             const t = doc.data();
-            setUser(t.Username);
+            setUser(t.Name.split(' ')[0]);
+            setUsername(t.Username);
+            document.getElementById('text-area').innerHTML = t.Data.join("\n");
         });
     }
 
     const setNotes = async (e) => {
         if(e){
+            console.log(e);
             await setDoc(doc(db,"Users", UID.toString()),{
-                Data: e.toString()
+                Data: e.split("\n")
             }, {merge: true})
         }
         else{
             await setDoc(doc(db,"Users", UID.toString()),{
-                Data: "Yet to write"
+                Data: "--"
             }, {merge: true})
         }
     }
@@ -52,15 +55,15 @@ const Main = () => {
 
             <div id="landed-page">
                 <div className="header">
-                    <h3 >Hello, {User}!!</h3>
+                    <h3 >Welcome to YourNote, {User}!! </h3>
                 </div>
                 <main className="notes-area">
                     <h3 className="sub-header">Notes Box</h3>
                     <div className="holder">
                         <textarea
                             className="comment-div"
-                            type="text"
-                            placeholder="Feel free to write"
+                            //type="text"
+                            placeholder={"Note by " + Username}
                             name="text-area"
                             id="text-area"                            
                             onChange={(event) => {
