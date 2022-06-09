@@ -5,8 +5,6 @@ import SignIn from "./Pages/SignIn/SignIn.js";
 import Main from "./Pages/Main/Main.js";
 import SignUp from "./Pages/SignUp/SignUp.js";
 
-//import './App.css';
-
 function App() {
   return (
     <div>

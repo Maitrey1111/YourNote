@@ -1,3 +1,5 @@
+import React from "react";
+
 import firebaseApp from "../../Firebase/firebase.js"
 import { onSnapshot, getFirestore, doc, setDoc, collection } from "@firebase/firestore"
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut, updateCurrentUser } from "firebase/auth";
@@ -12,8 +14,7 @@ function Navbar() {
     const Logout = () => {
         onAuthStateChanged(auth, (User) => {
             if (User) {
-                const uid = User?.uid;
-                //console.log(uid);
+                const uid = User.uid;
                 auth.signOut();
                 window.location.href = "/";
             }

@@ -1,16 +1,14 @@
-import react from "react"
-import reactDom from "react-dom"
-import { useState, useEffect } from "react"
+import React from "react"
+
+import { useState} from "react"
 
 import firebaseApp from "../../Firebase/firebase.js"
-import { onSnapshot, getFirestore, doc, setDoc, collection } from "@firebase/firestore"
-import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut, updateCurrentUser } from "firebase/auth";
+import { onSnapshot, getFirestore, doc, setDoc} from "@firebase/firestore"
+import { getAuth, onAuthStateChanged} from "firebase/auth";
 
-import background from "../../Assets/Images/8289.jpg"
 import Navbar from "../../Components/Navbar/Navbar.js"
 import Footer from "../../Components/Footer/Footer.js"
 import "./Main.css"
-
 
 const Main = () => {
     const auth = getAuth(firebaseApp);
@@ -22,8 +20,8 @@ const Main = () => {
 
 
     onAuthStateChanged(auth, (User) => {
-        const uid = User?.uid;
-        setUID(uid);
+        if(User)
+            setUID(User.uid);
     });
 
     if (UID.toString()) {
@@ -31,7 +29,12 @@ const Main = () => {
             const t = doc.data();
             setUser(t.Name.split(' ')[0]);
             setUsername(t.Username);
-            document.getElementById('text-area').innerHTML = t.Data.join("\n");
+            if(t.Data[0] && t.Data[1]){
+                document.getElementById('text-area').innerHTML = t.Data.join("\n");
+            }
+            else{
+                document.getElementById('text-area').innerHTML = '';
+            }
         });
     }
 
@@ -44,7 +47,7 @@ const Main = () => {
         }
         else{
             await setDoc(doc(db,"Users", UID.toString()),{
-                Data: "--"
+                Data: " "
             }, {merge: true})
         }
     }
@@ -63,7 +66,7 @@ const Main = () => {
                         <textarea
                             className="comment-div"
                             //type="text"
-                            placeholder={"Note by " + Username}
+                            placeholder={"Note by " + Username.toString()}
                             name="text-area"
                             id="text-area"                            
                             onChange={(event) => {
