@@ -1,0 +1,106 @@
+.SignIn{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+    margin-top: 0vh;
+    padding-bottom: 30vh;
+    background-attachment:fixed;
+    background-image: url(../../Assets/Images/8289.jpg);
+    overflow-y: hidden;
+    background-size: 100%;
+}::-webkit-scrollbar{
+    display: none;
+    
+}
+
+#sign-in-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    column-gap: 100px;
+    overflow-y: hidden;
+}
+
+.header-sign-in{
+    font-size: 8vh;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.sub-header-sign-in{
+    font-size: 25px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.input-box{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    background-color: rgb(255, 255, 255);
+    
+    box-shadow: 0px 1px 1px 1px rgb(182, 182, 182);
+    border: 1px solid rgb(182, 182, 182);
+    flex-direction: column;
+    gap: 2vh;
+
+    padding: 5vh 2vw;
+    margin-top: 0vh;
+    padding-top: 0;
+
+    border-radius: 10px;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+    margin-bottom: 2vh;
+}
+
+.email-input{
+    width: 20vw;
+    padding: 12px;
+    border-radius: 2px;
+    border: solid 1px black;
+    font-size: 15px;
+}
+
+.password-input{
+    width: 20vw;
+    padding: 12px;
+    border-radius: 2px;
+    border: solid 1px black;
+    font-size: 15px;    
+}
+
+.login-button{
+    /* box-shadow: none; */
+    border: solid 0px black;
+
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: rgb(122, 182, 32);
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+.login-button:hover{
+    background-color: rgb(90, 143, 10);
+}
+
+#errors{
+    display: none;
+    margin-top: 2vh;
+    color: red;
+    
+    justify-content: flex-start;
+}
+
+.signup-noti{
+    font-size: small;
+}
+
+/*####################### On landing */

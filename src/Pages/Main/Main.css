@@ -1,0 +1,126 @@
+
+.main{
+    display: flex;
+    flex-direction: column;
+    row-gap: 4vh;
+    margin-top: 0vh;
+    padding-bottom: 15vh;
+    height: 100%;
+    background-color: rgb(233, 255, 255);
+    background-image: url(../../Assets/Images/8289.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+
+#landed-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 0vh;
+}
+
+.header{
+    font-size: 6vh;
+    margin-bottom: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.sub-header{
+    font-size: 4.5vh;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+
+    border: 2px solid rgb(182, 182, 182);
+    flex-direction: column;
+    row-gap: 0vh;
+
+    padding: 0vh 2vw;
+    margin-top: 20vh;
+
+    background: white;
+    opacity: 0.85;
+
+    border-radius: 10px;
+}
+
+.logout-button{
+    /* box-shadow: none; */
+    border: solid 0px black;
+
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: rgb(230, 67, 3);
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+
+.logout-button:hover{
+    background-color: rgb(182, 52, 0);
+}
+
+
+/*######################*/
+
+.notes-area{
+    font-size: large;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    row-gap: 0.5vh;
+}
+
+textarea{
+    padding: 2vh 1.5vw;
+    max-width: 80vw;
+    max-height: 50vh;
+    min-width: 80vw;
+    min-height: 50vh;
+    font-size: 3vh;
+    border: 2px solid black;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    opacity: 0.9;
+    
+}
+
+
+/*######################*/
+.about{
+    display: flex;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.1vh;
+    padding: 0;
+
+    
+    flex-wrap: wrap;
+    width: 35vw;
+
+}
+
+.para{
+    text-align: justify;
+}
+
+.lower-para{
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    font-size: large;
+    padding: 0.1vh;
+}
