@@ -32,7 +32,7 @@ const Main = () => {
         else{
             if(window.location.pathname === "/main-page"){
                 document.body.style.display = "none";
-                window.location.href = "/YourNote";
+                window.location.href = "/";
             }
         }
     });

@@ -15,6 +15,7 @@ function Navbar() {
                 // const uid = User.uid;
                 auth.signOut();
                 window.location.href = "/";
+                console.log(window.history.state());
             }
         });
     }

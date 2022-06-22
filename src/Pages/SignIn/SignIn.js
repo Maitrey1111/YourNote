@@ -36,12 +36,12 @@ const SignIn = () => {
       })
       .catch((error) => {
         const errorCode = error.code;
-        // const errorMessage = error.message;
+        const errorMessage = error.message;
 
-        const e = capitalize(errorCode.substring(5).split('-').join(' '))
-
-        if(e === "Internal Error")
-          document.getElementById("errors").innerText = "Password field can't be blank";
+        const e = errorCode.substring(5).split('-').join(" ").toUpperCase();
+        
+        if(e == "INTERNAL ERROR")
+          document.getElementById("errors").innerText = "Password field can't be blank".toUpperCase();
         else
           document.getElementById("errors").innerText = e;
 
