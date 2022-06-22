@@ -2,7 +2,7 @@ import React from "react"
 import { useState } from "react"
 
 import firebaseApp from "../../Firebase/firebase.js"
-import { getFirestore, doc, setDoc, addDoc } from "@firebase/firestore"
+import { getFirestore, doc, setDoc} from "@firebase/firestore"
 import {
     getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword
 } from "firebase/auth";
@@ -41,13 +41,12 @@ const SignUp = () => {
                         Username: username
                     }, { merge: true });
 
-                    //window.location.href = "/";
                 })
                 .catch((error) => {
                     const errorCode = error.code;
 
                     const e = capitalize(errorCode.substring(5).split('-').join(' '));
-                    if (e == "Internal Error")
+                    if (e === "Internal Error")
                         document.getElementById("errors").innerText = "Password field can't be blank";
                     else
                         document.getElementById("errors").innerText = e;
@@ -64,11 +63,11 @@ const SignUp = () => {
                 })
                 .catch((error) => {
                     const errorCode = error.code;
-                    const errorMessage = error.message;
+                    // const errorMessage = error.message;
 
                     const e = capitalize(errorCode.substring(5).split('-').join(' '))
 
-                    if (e == "Internal Error")
+                    if (e === "Internal Error")
                         document.getElementById("errors").innerText = "Password field can't be blank";
                     else
                         document.getElementById("errors").innerText = e;
