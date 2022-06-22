@@ -16,12 +16,25 @@ const Main = () => {
 
     const [User, setUser] = useState('...');
     const [UID, setUID] = useState('');
-    const [Username, setUsername] = useState({});
+    const [Username, setUsername] = useState('. . .');
 
+    // function preventBack(){
+    //     window.history.forward();
+    // }
+
+    // setTimeout("preventBack()",0);
+
+    // window.onunload = null;
 
     onAuthStateChanged(auth, (User) => {
         if(User)
             setUID(User.uid);
+        else{
+            if(window.location.pathname === "/main-page"){
+                document.body.style.display = "none";
+                window.location.href = "/YourNote";
+            }
+        }
     });
 
     if (UID.toString()) {
@@ -50,7 +63,6 @@ const Main = () => {
                 Data: " "
             }, {merge: true})
         }
-        console.log(process.env.REACT_APP_TEXT);
     }
 
     return (

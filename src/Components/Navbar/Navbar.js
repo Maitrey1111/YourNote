@@ -17,8 +17,6 @@ function Navbar() {
                 auth.signOut();
                 window.location.href = "/";
             }
-            else
-                console.log("User logged out");
         });
     }
 
