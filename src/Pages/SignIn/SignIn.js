@@ -63,7 +63,7 @@ const SignIn = () => {
           <button onClick={() => { Login() }} className="login-button">Login</button>
           <div id="errors">Email or Password is not valid or incorrect</div>
           <div className="signup-noti">
-            <h3>New user? <a href="/sign-up-page">Sign Up</a></h3>
+            <h3>New user? <a href="/sign-up">Sign Up</a></h3>
           </div>
         </main>
       </div>
