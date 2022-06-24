@@ -1,5 +1,5 @@
+// import { useState } from "react"
 import React from "react"
-import { useState } from "react"
 
 import firebaseApp from "../../Firebase/firebase.js"
 import { getFirestore, doc, setDoc} from "@firebase/firestore"
@@ -15,7 +15,7 @@ const SignUp = () => {
     const auth = getAuth();
     const db = getFirestore(firebaseApp);
 
-    const [User, setUser] = useState('');
+    // const [User, setUser] = useState('');
 
     const Signup = async () => {
         const email = document.getElementById('email').value;
@@ -57,8 +57,8 @@ const SignUp = () => {
             signInWithEmailAndPassword(auth, email, password)
                 .then((userCredential) => {
                     // Signed in 
-                    const user = userCredential.user;
-                    setUser(user.uid)
+                        // const user = userCredential.user;
+                        // setUser(user.uid)
                     window.location.href = "/main-page";
                 })
                 .catch((error) => {

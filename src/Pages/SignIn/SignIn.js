@@ -1,5 +1,5 @@
+// import { useState } from "react";
 import React from "react";
-import { useState } from "react";
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged} from "firebase/auth";
 
 import "./SignIn.css";
@@ -7,7 +7,7 @@ import "./SignIn.css";
 const SignIn = () => {
 
   const auth = getAuth();
-  const [User, setUser] = useState();
+  // const [User, setUser] = useState();
 
   const Login = async () => {
     const email = document.getElementById('email').value;
@@ -20,7 +20,7 @@ const SignIn = () => {
         
         onAuthStateChanged(auth, (user) => {
           if (user != null) {
-            setUser(user);
+            //setUser(user);
             console.log("User is logged in");
             //const uid = User.uid;
             
