@@ -3,8 +3,6 @@ import { useState } from "react"
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged} from "firebase/auth";
 
 import "./SignIn.css"
-import capitalize from "../functions.js";
-
 
 const SignIn = () => {
 
@@ -36,11 +34,11 @@ const SignIn = () => {
       })
       .catch((error) => {
         const errorCode = error.code;
-        const errorMessage = error.message;
+        // const errorMessage = error.message;
 
         const e = errorCode.substring(5).split('-').join(" ").toUpperCase();
         
-        if(e == "INTERNAL ERROR")
+        if(e === "INTERNAL ERROR")
           document.getElementById("errors").innerText = "Password field can't be blank".toUpperCase();
         else
           document.getElementById("errors").innerText = e;
