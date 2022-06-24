@@ -98,7 +98,7 @@ const Main = () => {
                         </p>
                         <hr />
                         <p className="lower-para">Developed by: Maitrey Bhute<br />
-                            <hr />Checkout on: <a target="_blank" href="https://github.com/Maitrey1111">GitHub</a>
+                            <hr />Checkout on: <a target="_blank" href="https://github.com/Maitrey1111" rel="noreferrer">GitHub</a>
                         </p>
                     </div>
                 </main>

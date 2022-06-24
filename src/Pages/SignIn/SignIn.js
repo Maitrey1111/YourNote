@@ -1,13 +1,12 @@
-import React from "react"
-import { useState } from "react"
+import React from "react";
+import { useState } from "react";
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged} from "firebase/auth";
 
-import "./SignIn.css"
+import "./SignIn.css";
 
 const SignIn = () => {
 
   const auth = getAuth();
-
   const [User, setUser] = useState();
 
   const Login = async () => {
@@ -17,13 +16,14 @@ const SignIn = () => {
     await signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in 
-        const user = userCredential.user;
+        // const user = userCredential.user;
         
         onAuthStateChanged(auth, (user) => {
           if (user != null) {
             setUser(user);
             console.log("User is logged in");
             //const uid = User.uid;
+            
           } 
           else     
             console.log("User logged out");
@@ -63,7 +63,7 @@ const SignIn = () => {
           <button onClick={() => { Login() }} className="login-button">Login</button>
           <div id="errors">Email or Password is not valid or incorrect</div>
           <div className="signup-noti">
-            <h3>New user? <a href="/sign-up">Sign Up</a></h3>
+            <h3>New user? <a href="/sign-up-page">Sign Up</a></h3>
           </div>
         </main>
       </div>

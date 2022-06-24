@@ -15,7 +15,7 @@ const SignUp = () => {
     const auth = getAuth();
     const db = getFirestore(firebaseApp);
 
-    const [User, setUser] = useState();
+    const [User, setUser] = useState('');
 
     const Signup = async () => {
         const email = document.getElementById('email').value;
