@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# YourNote - a personalised note making web-app
 
 ### Link to the project: https://your-note-v1.netlify.app/
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+YourNote saves (auto-saves) your notes with a personalised authentication.
